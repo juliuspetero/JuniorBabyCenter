@@ -1,0 +1,22 @@
+{{> navbar}}
+
+<div class="container w-50 mb-5">
+    <h4 class="text-danger">
+        {{messages.errorMessage}}
+    </h4>
+    <h1>
+        Login
+    </h1>
+    <form onsubmit="return validateLoginForm()" action="/account/login" method="post" id="loginForms" name="loginForm">
+        <div class="form-group">
+            <input type="text" name="email" id="login_email" placeholder="Email " class="form-control">
+            <div style="color:red;" id="email-error"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="password" class="form-control">
+            <div style="color:red;" id="password-error"></div>
+        </div>
+        <button class="btn btn-success text-center" type="submit">Submit</button>
+    </form>
+</div>
